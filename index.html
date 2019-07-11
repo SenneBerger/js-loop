@@ -56,8 +56,21 @@
 
 
     function makeRandom() {
-
-    }
+            /*
+            Write your code here to randomize the colors.
+            You could do this for example by making some classes in CSS with different color schemes,
+            and then asigning a random one to each cell.
+            */
+            var myElements = document.querySelectorAll(".bgblack");
+            for (var i = 0; i < myElements.length; i++) {
+                //myElements[i].style.backgroundColor = "#fhgie5;";
+                myElements[i].style.backgroundColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+                console.log(Math.floor(Math.random()*16777215).toString(16));
+            }
+           }
+        function reset() {
+            field.innerHTML = "";
+        }
 
     function reset() {
       field.innerHTML = "";
